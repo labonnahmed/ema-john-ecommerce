@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Cart.css'
 
 const Cart = (props) => {
-    const total= props.cart.reduce((sumTotal, product) => sumTotal + product.price,0);
+    const total= props.cart.reduce((sumTotal, product) => sumTotal + product.price * product.quentity ,0);
 
     let shipping= 0;
     if(total > 500){
@@ -35,9 +34,9 @@ const Cart = (props) => {
             <p><small>Shipping cost: ${shipping}</small></p>
             <p><small>Tax + VAT: ${formatNumber(tax)}</small></p>
             <h5 className='text-danger'>Total Price: ${formatNumber(grandTotal)}</h5>
-            <Link to='/review'>
-                <button className='btn btn-warning'>Order Review</button>
-            </Link>
+            {
+                props.children
+            }
        </div>
     );
 };

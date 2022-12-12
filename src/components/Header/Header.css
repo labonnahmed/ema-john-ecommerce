@@ -5,3 +5,19 @@
 .header{
     text-align: center;
 }
+
+.menu{
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.menu:hover{
+    color: hsl(39, 95%, 59%);
+}
+
+.signUpBtn{
+    background-color: #212529;
+    border: none;
+}

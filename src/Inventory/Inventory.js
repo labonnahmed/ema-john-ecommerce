@@ -3,7 +3,7 @@ import React from 'react';
 const Inventory = () => {
     return (
         <div>
-            <h1>Inventory cooming soon</h1>
+            <h1>This is inventory</h1>
         </div>
     );
 };
